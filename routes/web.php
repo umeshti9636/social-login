@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SampleController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ViewController;
+use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\GithubController;
+use App\Http\Controllers\FbController;
+
 
 
 use Illuminate\Http\Request;
@@ -65,4 +69,32 @@ Route::controller(ViewController::class)->group(function(){
     Route::get('delete/{id}', 'delete')->name('delete');
 
 });
+    Route::get('auth/google', [GoogleController::class, 'redirect'])->name('google-auth');
+    Route::get('auth/google/call-back', [GoogleController::class, 'CallBack']);
+
+
+    Route::get('github', [GitHubController::class, 'Gitredirect']);
+    Route::get('callback/github', [GitHubController::class, 'GitcallBack']);
+
+    Route::get('facebook', [FbController::class, 'Fbredirect']);
+    Route::get('/auth/facebbok/callback', [FbController::class, 'FbcallBack']);
+    
 });
+//Route::get("/loginwithgoogle", [GoogleController::class, 'loginwithgoogle']);
+
+
+
+// Route::get('/auth/redirect', function () {
+//     return Socialite::driver('github')->redirect();
+// });
+
+// Route::get('/auth/callback', function () {
+//     $user = Socialite::driver('github')->user();
+
+//     // $user->token
+// });
+
+
+
+
+

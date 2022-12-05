@@ -6,7 +6,7 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -14,11 +14,11 @@
 
 <body style="background: rgb(2,0,36);
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(205,70,129,1) 45%, rgba(0,212,255,1) 100%);">
-	
+
 
 	<div class="container h-100" style="padding-top: 100px;">
 
-	
+
 		<div class="col-md-6 offset-md-3" style="background:white;border :solid 1px black;box-shadow:10px 15px 12px black;border-radius:10px;padding:30px">
 			<div class="user_card">
 				<h2 class="text-center PT-10">Login</h2>
@@ -47,6 +47,17 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(205,70,129,1) 45%, rg
 						<div class="d-grid mx-auto">
 							<button class="btn btn-primary" type="submit">Login</button>
 						</div>
+						<p>OR</p>
+						<div class="d-grid mx-auto">
+							<a href="{{route('google-auth')}}" class=" btn btn-info"><i class="fa fa-google"></i>Login with Google</a>
+							<a href="{{url('github')}}" class=" btn btn-danger"><i class="fa fa-google"></i>Login with Git</a>
+							<a href="{{url('facebook')}}" class=" btn btn-primary"><i class="fa fa-facebook"></i>Login with Facebook</a>
+						</div>
+						<div class="d-grid mx-auto">
+
+						</div>
+
+
 
 			</div>
 
